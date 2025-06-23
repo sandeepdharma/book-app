@@ -8,11 +8,15 @@ import dotenv from "dotenv";
 dotenv.config();
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow only frontend origin
+    origin: [
+      "http://localhost:3000", // for local dev
+      "https://your-frontend-project-name.vercel.app", // update this to your Vercel frontend URL
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
+
 import { errorHandler } from "./middleware/errorhandler.js";
 import authRoutes from "./routes/auth.route.js";
 import usersRoutes from "./routes/users.route.js";
