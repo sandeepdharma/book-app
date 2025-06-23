@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "main": "script.js",
-  "scripts": {
-    "start": "node script.js",
-    "dev": "nodemon server/script.js"
-  },
+ "scripts": {
+  "dev": "nodemon server/script.js",
+  "start": "node server/script.js"
+},
   "type": "module",
   "author": "",
   "license": "ISC",
