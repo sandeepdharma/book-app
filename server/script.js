@@ -9,8 +9,8 @@ dotenv.config();
 app.use(
   cors({
     origin: [
-      "http://localhost:3000", // for local dev
-      "https://your-frontend-project-name.vercel.app", // update this to your Vercel frontend URL
+      "http://localhost:3000",
+      "https://book-app-client.vercel.app", // replace with your frontend Vercel URL
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
