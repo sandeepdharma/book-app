@@ -66,8 +66,8 @@ route.post(
 
 route.get(
   "/get-books",
-  verifyToken,
-  verifyRole(["librarian", "admin", "super_admin"]),
+  // verifyToken,
+  // verifyRole(["librarian", "admin", "super_admin"]),
   async (req, res, next) => {
     try {
       const [books] = await database.query("SELECT * FROM books");

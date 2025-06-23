@@ -25,6 +25,10 @@ import booksRoutes from "./routes/books.route.js";
 app.listen(process.env.PORT, () => {
   console.log(`Server Listening at ${process.env.PORT}`);
 });
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
+
 
 app.use("/api/v1/books", authRoutes);
 app.use("/api/v1/books", usersRoutes);
